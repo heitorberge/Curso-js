@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+		<link rel="stylesheet" href="estilojs.css"/>
+	</head>
+	<body>
+		<section id="fundo">
+			<header>
+				<h1>Vamos Contar</h1>
+			</header>
+			<section id='branco'>
+				<div>
+					<p>Início :<input type="number" name="inc" id="inc"></p> 
+					<p>Fim : <input type="number" name="fim" id="fim"></p>
+					<p>Passo : <input type="number" name="pss" id="pss"></p> 
+					<input type="Button" value="Contar" onclick='conte()'>
+				</div>
+				<div id="res">
+					Preparando a Contagem...
+				</div>
+			</section>
+			<footer>
+				<i><p>&copy; Curso Em Vídeo</p></i>
+			</footer>
+		</section>
+		<script>
+			function conte() {
+				let inc = document.getElementById('inc')
+				let fim = document.getElementById('fim')
+				let pss = document.getElementById('pss')
+				let res = document.getElementById('res')
+				if (inc.value.legth == 0 || fim.value.legth == 0 ||pss.value.legth == 0) {
+					window.alert('[ERRO] Faltam dados!')
+				}else{
+					res.innerHTML `contando...`
+					let i = Number(inc.value)
+					let f = Number(fim.vaue)
+					let p = Number(pss.value) 
+					if (p == 0){
+							window.alert('O VALOR DE PASSO É 0 VAMOS CONTAR QUE ELE É 1')
+							p = 1
+		 			}
+					if (i < f) {
+						for(let c = i;c <= f;c += p) {
+							res.innerHTML += `${c} \u{1F449}`
+						}
+					}else {
+						for (let c = i;c >= f;c -= p) {
+							res.innerHTML += `${c} \u{1F449}`
+						}
+					}
+					res.innerHTML += `\u{1F3C1}`
+				}
+			}
+		</script>
+	</body>
+</html>

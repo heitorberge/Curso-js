@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Meu progama DOM</title>
+		<style>
+			body {
+				font: normal 18pt Arial,sans-serif;
+				background-color : #604d8d;
+				color : #ffffff;
+			}
+			</style>
+	</head>
+	<body>
+		<section>
+		<h1>Iniciando Estudos DOM </h1>
+		<p>Aqui vai o resultado</p>
+		<p>Aprendendo a usar o <strong> DOM </strong> em Javascript</p>
+		<div id='Msg'>Clique em mim</div>
+		</section>
+		<script> 
+			var p1 =window.document.getElementByName ('p')[0]
+			p1.style.color = 'blue'
+			var d = window.document.getElementById ('msg')
+			d.style.background = 'green'
+		</script>
+	</body>
+</html>

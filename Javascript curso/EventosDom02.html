@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>CALCULADORA</title>
+		<style>
+			body {
+				font-family: Arial,sans-serif;
+				Font-size: 15pt;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Somando Valores</h1>
+		Escolha 1 Número:<input type="number" name="txtn1" id="txtn1"><br/>+<br/>
+		Escolha outro Número:<input type="number" name="txtn2" id="txtn2"><br/>
+		<input type="button" value="Somar" onclick="somar()"><br/>
+		<h1>Subtraindo Valores</h1>
+		Escolha 1 Número:<input type="number" name="txtn3" id="txtn3"><br/>-<br/>
+		Escolha outro Número:<input type="number" name="txtn4" id="txtn4"><br/>
+		<input type="button" value="Subtrair" onclick="subtrair()"><br/>
+		<h1>Multiplicando Valores</h1>
+		Escolha 1 Número:<input type="number" name="txtn5" id="txtn5"><br/>*<br/>
+		Escolha outro Número:<input type="number" name="txtn6" id="txtn6"><br/>
+		<input type="button" value="Multiplicar" onclick="multiplicar()"><br/>
+		<h1>Dividindo Valores</h1>
+		Escolha 1 Número:<input type="number" name="txtn7" id="txtn7"><br/>/<br/>
+		Escolha outro Número:<input type="number" name="txtn8" id="txtn8"><br/>
+		<input type="button" value="Dividir" onclick="dividir()"><br/>
+		<script> 
+				function somar(){
+					var tn1 = window.document.getElementById( 'txtn1')
+					var tn2 = window.document.getElementById( 'txtn2')
+					var tn1 = Number(tn1.value)
+					var tn2 = Number(tn2.value)
+					var resultado = tn1 + tn2
+					window.document.write ('O resultado da conta é ' + resultado)
+				}
+				function subtrair(){
+					var tn3 = window.document.getElementById( 'txtn3')
+					var tn4 = window.document.getElementById( 'txtn4')
+					var tn3 = Number(tn3.value)
+					var tn4 = Number(tn4.value)
+					var resultado = tn3 - tn4
+					window.document.write ('O resultado da conta é ' + resultado)
+				}
+				function multiplicar(){
+					var tn5 = window.document.getElementById( 'txtn1')
+					var tn6 = window.document.getElementById( 'txtn2')
+					var tn5 = Number(tn5.value)
+					var tn6 = Number(tn6.value)
+					var resultado = tn5 * tn6
+					window.document.write ('O resultado da conta é ' + resultado)
+				}
+				function dividir(){
+					var tn7 = window.document.getElementById( 'txtn1')
+					var tn8 = window.document.getElementById( 'txtn2')
+					var tn7 = Number(tn1.value)
+					var tn8 = Number(tn2.value)
+					var resultado = tn7 / tn8
+					window.document.write ('O resultado da conta é ' + resultado)
+				}
+		</script>
+	</body>
+</html>

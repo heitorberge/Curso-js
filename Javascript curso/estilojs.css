@@ -1,0 +1,23 @@
+header {
+	text-align: center;
+}
+section#branco {
+	background-color: #ffffff ;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+	color: #000000;
+	text-align: center;
+}
+footer{
+	width: 425px;
+	height: 405px;
+	margin : auto;
+	color: white;
+	padding: auto;
+	text-align: center;
+}
+body {
+	font-family: Arial, sans-serif;
+	background-color: #825bff;
+	color: #ffffff;
+}

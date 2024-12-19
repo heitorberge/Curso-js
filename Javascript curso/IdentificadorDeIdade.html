@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Identificador de Idade</title>
+		<link rel="stylesheet" href="estilojs.css"/>
+	</head>
+	<body>
+		<section id="fundo">
+			<header>
+				<h1>Verificador de Idade</h1>
+			</header>
+			<section id='branco'>
+				<div>
+					<p>Ano de Nascimento:
+						<input type="number" name="txtano" id="txtano" min="1900"/>
+					</p>
+					<p>Sexo:
+						<input type="radio" name="radsex" id="mas" checked>
+						<label for="mas">Masculino</label>
+						<input type="radio" name="radsex" id="fem" checked>
+						<label for="fem">Feminino</label>
+					</p>
+					<p>
+						<input type="button" value="Verificar" onclick="verificar()"/>
+					</p>
+				</div>
+				<div id="res">
+					Preencha os dados acima para ver o resultado!
+				</div>
+			</section>
+			<footer>
+				<i><p>&copy; Curso Em Vídeo</p></i>
+			</footer>
+		</section>
+		<script>
+			function verificar() {
+	var data = new Date()
+	var ano = data.getFullYear()
+	var fano = document.getElementById('txtano')
+	var res = document.querySelector('div#res')
+	if (fano.value > ano) {
+		var a = Number(ano.value)
+		var n = Number(fano.value)
+		var r = a - n
+		res.innerHTML = `[ERRO]ESSA PESSOA AINDA NÃO NASCEU.ELA IRA NASCER DAQUI ${r} ANOS`
+	}else if (fano.value.length == 0 ){
+		window.alert ('[ERRO] VERIFIQUE OS DADOS E TENTE NOVAMENTE!')
+	}else {
+		var a = Number(ano.value)
+		var n = Number(fano.value)
+		var r = a - n
+		var fsex = document.getElementsByName('radsex')
+		var idade = ano - n
+		var genero = 'null'
+		if (fsex[0].checked) {
+			genero = 'UM HOMEM'
+		}else if (fsex[1].checked){
+			genero = 'UMA MULHER'
+		}
+		res.innerHTML = `DETECTAMOS ${genero} DE ${idade} ANOS`
+	}
+}
+		</script>
+	</body>
+</html>

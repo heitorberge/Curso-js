@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Hora do Dia</title>
+		<link rel="stylesheet" href="estilojs.css"/>
+	</head>
+	<body onload="carregar()"  onclick="carregar()">
+		<section id="fundo">
+			<header>
+				<h1>Hora do Dia</h1>
+			</header>
+			<section id='branco'>
+				<div id="msg">
+					Aqui vai aparecer a mensagem
+				</div>
+				<p>Recarregue a página para atualizar a hora ou clique</p>
+				<div id="foto">
+					<img id="imagem" src="manhã.jpg" alt="Foto do Dia">
+				</div>
+			</section>
+			<footer>
+				<i><p>&copy; Curso Em Vídeo</p></i>
+			</footer>
+		</section>
+		<script>
+			function carregar() {
+	var msg = window.document.getElementById('msg')
+	var img = window.document.getElementById('imagem')
+	var data = new Date()
+	var hora = data.getHours()
+	var minutos = data.getMinutes()
+	var segundos = data.getSeconds ()
+	msg.innerHTML = `Agora são ${hora} horas e ${minutos} minutos e ${segundos} segundos.`
+	if (hora >= 0 && hora < 12) {
+		//BOM DIA!
+		img.src = 'manha.jpg'
+		document.body.style.background = '#feffa8'
+	}else if (hora >= 12 && hora < 18) {
+		//BOA TARDE!
+		img.src = 'tarde.jpg'
+		document.body.style.background = '#ffb759'
+	}else {
+		//BOA NOITE
+		img.src = 'Noite.jpg'
+		document.body.style.background = '#414141'
+	}
+}
+
+
+		</script>
+	</body>
+</html>

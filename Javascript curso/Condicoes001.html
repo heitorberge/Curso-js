@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DETRAN</title>
+		<style>
+			body {
+				font-family: Arial,sans-serif;
+				Font-size: 15pt;
+			}
+			input {
+				font-family: Arial,sans-serif;
+				Font-size: 15pt;
+				width: 100px;
+			}
+			h2 {
+				background-color: #c2c2c2;
+				color: #ffffff;
+				width: 500px;
+			}
+			section {
+				display: block;
+				width : 350px;
+				float: auto;
+				border-right:1px solid #606060;
+				padding-right: 15px;
+				border-bottom:1px solid #606060;
+				padding-bottom: 15px;
+				border-left:1px solid #606060;
+				padding-left: 15px;
+				border-top:1px solid #606060;
+				padding-top: 15px;
+			}
+			h1 {
+				font-size: 20pt;
+				color: #aaaaaa;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<h1>SISTEMA DE MULTAS</h1>
+			Velocidade do carro:<Input type="number" name="vel" id="vel">Km/h<br/>
+			<input type="button" value="Verificar" onclick="verificar()">
+			<div id='res'>
+			
+			</div>
+			<script> 
+				function verificar() {
+					var txtv = window.document.getElementById('vel')
+					var vel = Number(txtv.value)
+					var res = window.document.getElementById('res')
+					if ( vel > 60) {
+						res.innerHTML = `Você passou da velocidade máxima,MULTADO!`
+					}
+					window.document.write (`Dirija sempre com cinto de segurança.`)
+				}
+			</script>
+		</section>
+	</body>
+</html>

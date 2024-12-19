@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Tabuada</title>
+		<link rel="stylesheet" href="estilojs.css"/>
+	</head>
+	<body>
+		<section id="fundo">
+			<header>
+				<h1>Tabuada</h1>
+			</header>
+			<section id='branco'>
+				<div>
+					<p>Número : <input type="number" name="num"  id="txtn"><input type="button" value="Gerar Tabuada" onclick='multiplicar()'> </p>
+				</div>
+				<div id="res">
+					Gerando Resultado...
+				</div>
+			</section>
+			<footer>
+				<i><p>&copy; Curso Em Vídeo</p></i>
+			</footer>
+		</section>
+		<script>
+		function multiplicar() {
+	let num = document.getElementById('txtn')
+	let tab = document.getElementById('seltab')
+	if(num.value.legth == 0) {
+		window.document.advice('[ERRO] NÃO É  POSSÍVEL FAZER TABUADA SEM UM NÚMERO')
+	}else{
+		let n = Number(num.value)
+		let c = 1
+		let res = document.getElementById('res')
+		res.innerHTML = ``
+		while (c <= 10) {
+			let r = n * c
+			res.innerHTML = `${n} x ${c} = ${r}`
+			c++
+		}	
+	}
+}
+	
+		</script>
+	</body>
+</html>

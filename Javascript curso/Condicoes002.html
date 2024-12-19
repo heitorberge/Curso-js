@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Verificador de Idade</title>
+		<style>
+			body {
+				font-family: Arial,sans-serif;
+				Font-size: 15pt;
+			}
+			input {
+				font-family: Arial,sans-serif;
+				Font-size: 15pt;
+				width: 100px;
+			}
+			h2 {
+				background-color: #c2c2c2;
+				color: #ffffff;
+				width: 500px;
+			}
+			section {
+				display: block;
+				width : 550px;
+				float: auto;
+				border-right:1px solid #606060;
+				padding-right: 15px;
+				border-bottom:1px solid #606060;
+				padding-bottom: 15px;
+				border-left:1px solid #606060;
+				padding-left: 15px;
+				border-top:1px solid #606060;
+				padding-top: 15px;
+			}
+			h1 {
+				font-size: 20pt;
+				color: #aaaaaa;
+			}
+		</style>
+	</head>
+	<body>
+			<section>
+				<h2>Escreva a sua idade</h2>
+				<input type="number" name="idade2" id ="idade2"/>
+				<input type ="button" value="Verificar" onclick="verificaridade()"/>
+			</section>
+			<script>
+				function verificaridade() {
+					var idade = getElementById('idade2')
+					if (idade < 13) {
+						window.document.write('Você tem ' + idade' anos,Você é uma criança ')
+					}else {
+						if (idade >= 18) {
+							window.document.write('Você tem ' + idade' anos,Você é um adulto/Maior de Idade.)
+						}else {
+							window.document.write('Você tem ' + idade' anos,Você é um adolecente.')
+						}
+					}
+				}
+			</script>
+	</body>
+</html>

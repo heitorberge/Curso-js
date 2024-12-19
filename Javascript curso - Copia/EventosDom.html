@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Meu progama DOM</title>
+		<style>
+			body {
+				font: normal 18pt Arial,sans-serif;
+				color : #ffffff;
+			}
+			div#area {
+				
+				background-color: rgb(42,139,42);
+				width : 200px;
+				height: 200px;
+				line-height: 200px;
+				text-align: center;
+			}
+			</style>
+	</head>
+	<body>
+		<div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+			Interaja..
+		</div>
+		<script> 
+			var n1 = window.document.getElementById("area")
+			n1.addEventListener('click',clicar)
+			n1.addEventListener('mouseenter',entrar)
+			n1.addEventListener('mouseout',sair)
+				function clicar(){
+					n1.innertext = 'Click!'
+					n1.style.background = 'red'
+				}
+				function entrar() {
+					n1.innertext = 'Dentro!'
+					n1.style.background = 'blue'
+				}
+				function sair() {
+					n1.innertext = 'Saiu!'
+					n1.style.background = 'rgb(42,139,42'
+				}
+		</script>
+	</body>
+</html>
