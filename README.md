@@ -6,7 +6,7 @@ O JavaScript é uma linguagem de programação essencial para o desenvolvimento 
 
 ## 🌟 Conteúdo Esperado do Repositório:
 
-O repositório `Curso-js` provavelmente contém exemplos de código, exercícios e soluções que abordam os tópicos essenciais do JavaScript, seguindo a estrutura do curso oficial do Curso em Vídeo:
+O repositório `Curso-js` contém exemplos de código, exercícios e soluções que abordam os tópicos essenciais do JavaScript, seguindo a estrutura do curso oficial do Curso em Vídeo:
 
 * **Fundamentos do JavaScript:**
     * Introdução à linguagem e suas capacidades.
